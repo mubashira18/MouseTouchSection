@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    background: #160d0b;
+}
+
+section.container {
+
+    .bg2,
+    .mountains,
+    .soldier {
+        width: 100%;
+        transform-origin: center;
+        height: 100%;
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .wrapper {
+        width: 100vw;
+        overflow: hidden;
+        background: url('https://assets.codepen.io/2621168/bg_1.jpg');
+        background-size: 110%;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 0;
+        aspect-ratio: 16/9;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .bg2 {
+        background-image: url('https://assets.codepen.io/2621168/bg2.png');
+        z-index: 3;
+        width: 100%;
+    }
+
+    .mountains {
+        background-image: url('https://assets.codepen.io/2621168/mountains_1.png');
+        z-index: 2;
+        width: 100%;
+    }
+
+    .soldier {
+        background-image: url('https://assets.codepen.io/2621168/soldier.png');
+        /* background-image: url('../src/assets/robot.png'); */
+        height: 100vh;
+        z-index: 2;
+    }
+
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    margin: 0;
+    font-size: 3rem;
+    padding: 0;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+}
+
+.text-mask {
+    overflow: hidden;
+}
+
+span {
+    display: block;
+}
+
+.top {
+    color: white;
+    text-align: center;
+    /* padding-top: 3em; */
+    font-size: 3rem;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.smoke-section {
+    height: 0vh;
+    background: transparent;
+}
+
+.head {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: cover;
+    text-align: center;
+    color: #ddd;
+    font-size: 5rem;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.head span {
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+}
+
+
+.arrow-scroll {
+    position: relative;
+    height: 17em;
+}
+
+.arrow {
+
+    border: solid #d0d0e0;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.arrow:nth-child(2) {
+    animation: arrow1 1.5s ease-in-out infinite;
+}
+
+.arrow:nth-child(3) {
+    animation: arrow2 1.5s ease-in-out infinite;
+}
+
+@keyframes arrow1 {
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes arrow2 {
+    100% {
+        top: 50%;
+        opacity: 0;
+    }
+}
+
+#container3D canvas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg img {
+    width: 110vw;
+    height: 110vh;
+    filter: brightness(0.6);
+}
+
+.rock1 {
+    position: absolute !important;
+    left: 10vw !important;
+    top: 20vh !important;
+}
+
+.rock1 img {
+    width: 40%;
+    filter: brightness(0.5);
+}
+
+.text h1 {
+    font-family: "AlphaCentauri" !important;
+    font-size: 5vw;
+    color: #fff;
+    letter-spacing: 20px;
+    position: absolute;
+    top: 35vh;
+    left: 34vw;
+}
+
+.earth img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 34vw;
+    top: 25vh;
+    z-index: 1;
+    filter: brightness(0.7);
+}
+
+.mid {
+    left: -150px !important;
+    bottom: -100px !important;
+    top: unset !important;
+}
+
+.mid img {
+    width: 100%;
+    z-index: 2;
+    left: -20px;
+    top: 20vh !important;
+    filter: brightness(0.8);
+}
+
+.fore {
+    right: -50px !important;
+    bottom: -200px !important;
+    top: 0px !important;
+    left: unset !important;
+}
+
+.fore img {
+    width: 400px;
+    height: 110vh;
+    z-index: 3;
+    filter: brightness(0.5);
+}
